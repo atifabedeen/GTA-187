@@ -15,13 +15,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PrometeoCarController : MonoBehaviour
-{
-
+{    
+    [SerializeField] public Text timeText;
     //CAR SETUP
 
       [Space(20)]
       //[Header("CAR SETUP")]
-      [Space(10)]
       [Range(20, 190)]
       public int maxSpeed = 90; //The maximum speed that the car can reach in km/h.
       [Range(10, 120)]
@@ -45,6 +44,7 @@ public class PrometeoCarController : MonoBehaviour
                                     // in the points x = 0 and z = 0 of your car. You can select the value that you want in the y axis,
                                     // however, you must notice that the higher this value is, the more unstable the car becomes.
                                     // Usually the y value goes from 0 to 1.5.
+        
 
     //WHEELS
 
@@ -66,6 +66,7 @@ public class PrometeoCarController : MonoBehaviour
       [Space(10)]
       public GameObject rearRightMesh;
       public WheelCollider rearRightCollider;
+
 
     //PARTICLE SYSTEMS
 
@@ -265,7 +266,7 @@ public class PrometeoCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      //timeText.Text = "Time: " + Time.deltaTime;
       //CAR DATA
 
       // We determine the speed of the car.
@@ -377,7 +378,7 @@ public class PrometeoCarController : MonoBehaviour
       if(useUI){
           try{
             float absoluteCarSpeed = Mathf.Abs(carSpeed);
-            carSpeedText.text = Mathf.RoundToInt(absoluteCarSpeed).ToString();
+            carSpeedText.text = "Speed: " + Mathf.RoundToInt(absoluteCarSpeed).ToString();
           }catch(Exception ex){
             Debug.LogWarning(ex);
           }
