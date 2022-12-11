@@ -363,5 +363,9 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             return false;
         }
+
+        public void increaseSpeed(){
+            m_Topspeed += 20;
+        }
     }
 }
