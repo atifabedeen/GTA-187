@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -18,6 +20,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
     public class CarController : MonoBehaviour
     {
+        public GameObject speedText;
         [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
         [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
         [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
@@ -128,6 +131,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
+            speedText.GetComponent<Text>().text = "Speed: " + (int)CurrentSpeed + " MPH";
             for (int i = 0; i < 4; i++)
             {
                 Quaternion quat;
