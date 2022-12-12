@@ -10,6 +10,6 @@ public class MathCollider : MonoBehaviour
     void OnTriggerEnter(){
         Debug.Log("pee");
         box.SetActive(false);
-        mathQ.text = "What is 5 * 128710274?"; 
+        mathQ.text = "What is 5 * 12?"; 
     }
 }
