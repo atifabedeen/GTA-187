@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace UnityStandardAssets.Vehicles.Car{
 public class ans1 : MonoBehaviour
@@ -10,6 +11,7 @@ public class ans1 : MonoBehaviour
     // CarController cars;
     public GameObject cars;
     public Text mathq;
+    public TMP_Text ans;
     public GameObject box;
     void Start()
     {
@@ -19,6 +21,7 @@ public class ans1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ans.text = MathCollider.rightAns.ToString();
         
     }
 

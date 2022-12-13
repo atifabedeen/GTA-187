@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 namespace UnityStandardAssets.Vehicles.Car{
     public class WrongAns : MonoBehaviour
     {
@@ -10,6 +10,7 @@ namespace UnityStandardAssets.Vehicles.Car{
         // CarController cars;
         public GameObject cars;
         public Text mathq;
+        public TMP_Text ans;
         public GameObject box;
         void Start()
         {
@@ -19,7 +20,7 @@ namespace UnityStandardAssets.Vehicles.Car{
         // Update is called once per frame
         void Update()
         {
-            
+            ans.text = MathCollider.wrongAns.ToString();
         }
 
         void OnTriggerEnter(){

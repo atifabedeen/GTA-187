@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -774,7 +774,6 @@ GameObject:
   - component: {fileID: 824800924}
   - component: {fileID: 824800923}
   - component: {fileID: 824800922}
-  - component: {fileID: 824800926}
   - component: {fileID: 824800927}
   m_Layer: 0
   m_Name: MathAns (1)
@@ -862,21 +861,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -55.148, z: 0}
---- !u!114 &824800926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824800921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21959fde4061f47ec8569f3f710bf4c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cars: {fileID: 0}
-  mathq: {fileID: 0}
-  box: {fileID: 0}
 --- !u!114 &824800927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,6 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars: {fileID: 1043435782}
   mathq: {fileID: 784448118}
+  ans: {fileID: 1477900984}
   box: {fileID: 824800921}
 --- !u!1 &835692628
 GameObject:
@@ -1383,6 +1368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars: {fileID: 1043435782}
   mathq: {fileID: 784448118}
+  ans: {fileID: 1857148392}
   box: {fileID: 1077009155}
 --- !u!1 &1077041731
 GameObject:
@@ -1816,6 +1802,10 @@ PrefabInstance:
       propertyPath: speedText
       value: 
       objectReference: {fileID: 1662899057}
+    - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Topspeed
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: speedText
       value: 
