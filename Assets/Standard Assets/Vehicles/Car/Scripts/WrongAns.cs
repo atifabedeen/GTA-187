@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Vehicles.Car{
         }
 
         void OnTriggerEnter(){
-            mathq.text = "Wrong Answer! Your max speed has decreased by 20 mph";
+            mathq.text = "Wrong Answer! Your max speed has decreased by 5 mph";
             cars.GetComponent<CarController>().decreaseSpeed();
             box.SetActive(false);
         }

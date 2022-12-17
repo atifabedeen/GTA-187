@@ -369,11 +369,11 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
         public void increaseSpeed(){
-            m_Topspeed += 20;
+            m_Topspeed += 5;
         }
 
         public void decreaseSpeed(){
-            m_Topspeed -= 20;
+            m_Topspeed -= 5;
         }
     }
 }

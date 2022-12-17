@@ -26,7 +26,7 @@ public class ans1 : MonoBehaviour
     }
 
     void OnTriggerEnter(){
-        mathq.text = "Correct Answer! Your max speed has increased by 20 mph";
+        mathq.text = "Correct Answer! Your max speed has increased by 5 mph";
         cars.GetComponent<CarController>().increaseSpeed();
         box.SetActive(false);
     }
