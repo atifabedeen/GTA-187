@@ -18,7 +18,8 @@ public class ResetText : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(){
-        mathq.text = "";
+    void OnTriggerEnter(Collider coll){
+        if (coll.gameObject.tag != "aicar")
+            mathq.text = "";
     }
 }

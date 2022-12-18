@@ -13,12 +13,16 @@ public class MathCollider : MonoBehaviour
     private char op;
     public static int wrongAns;
     public static int rightAns;
-    void OnTriggerEnter(){
-        Debug.Log("pee");
-        box.SetActive(false);
-        generateExpression();
-        mathQ.text = "What is " + leftNum + " " + op + " " + rightNum + "?"; 
+
+    void OnTriggerEnter(Collider coll){
+        if (coll.gameObject.tag != "aicar"){
+            Debug.Log("pee");
+            box.SetActive(false);
+            generateExpression();
+            mathQ.text = "What is " + leftNum + " " + op + " " + rightNum + "?"; 
+        }
     }
+
     private void generateExpression() {
         leftNum = Random.Range(0,21);
         rightNum = Random.Range(0,21);

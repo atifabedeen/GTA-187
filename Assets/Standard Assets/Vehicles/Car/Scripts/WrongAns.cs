@@ -23,10 +23,12 @@ namespace UnityStandardAssets.Vehicles.Car{
             ans.text = MathCollider.wrongAns.ToString();
         }
 
-        void OnTriggerEnter(){
-            mathq.text = "Wrong Answer! Your max speed has decreased by 5 mph";
-            cars.GetComponent<CarController>().decreaseSpeed();
-            box.SetActive(false);
+        void OnTriggerEnter(Collider coll){
+            if (coll.gameObject.tag != "aicar"){
+                mathq.text = "Wrong Answer! Your max speed has decreased by 5 mph";
+                cars.GetComponent<CarController>().decreaseSpeed();
+                box.SetActive(false);
+            }
         }
     }
 }
