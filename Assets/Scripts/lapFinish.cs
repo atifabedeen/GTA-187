@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
+using UnityEngine.SceneManagement;
 
 public class lapFinish : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class lapFinish : MonoBehaviour
     public GameObject qBox3;
     public Text lapText;
     public int nLaps = 1;
-    private int totalLaps = 3;
+    public int totalLaps = 3;
 
     public GameObject bestMill;
     public GameObject bestMin;
@@ -26,7 +27,10 @@ public class lapFinish : MonoBehaviour
     
    public void OnTriggerEnter() {
         nLaps += 1;
-        //Check here for game over
+        if(nLaps > totalLaps) {
+            Debug.Log("poooop");
+            SceneManager.LoadScene("EndScene");
+        }
         lapText.text = "LAP: " + nLaps + "/" + totalLaps;
         if(LapTimeController.secCount <= 9) {
             bestSec.GetComponent<Text>().text = "0" + LapTimeController.secCount + ".";

@@ -3812,6 +3812,7 @@ MonoBehaviour:
   qBox3: {fileID: 472620234}
   lapText: {fileID: 531537857}
   nLaps: 1
+  totalLaps: 2
   bestMill: {fileID: 211971178}
   bestMin: {fileID: 433836458}
   bestSec: {fileID: 1072695971}

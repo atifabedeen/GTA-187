@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondRaceTrack.unity
     guid: 341a5db6a0ceb674084480e0f4938817
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: e11e43a0dbdb0e043a49f8c96c1b7593
   m_configObjects: {}
