@@ -27,6 +27,10 @@ public class lapFinish : MonoBehaviour
     public GameObject bestMill;
     public GameObject bestMin;
     public GameObject bestSec;
+
+    public void start() {
+        hasAiWon = false;
+    }
     
    public void OnTriggerEnter(Collider coll) {
     if(coll.gameObject.tag != "aicar"){
