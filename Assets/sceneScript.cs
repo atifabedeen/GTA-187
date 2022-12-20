@@ -10,7 +10,4 @@ public class sceneScript : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void goToNoida(){
-        SceneManager.LoadScene(2);
-    }
 }
