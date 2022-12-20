@@ -19,19 +19,13 @@ public class lapFinish : MonoBehaviour
     public GameObject qBox3;
     public Text lapText;
     public int nLaps = 1;
-    public int totalLaps = 3;
-
-    private int ailaps = 1;
-    public static bool hasAiWon = false;
+    public static int totalLaps = 3;
 
     public GameObject bestMill;
     public GameObject bestMin;
     public GameObject bestSec;
 
-    public void start() {
-        hasAiWon = false;
-    }
-    
+
    public void OnTriggerEnter(Collider coll) {
     if(coll.gameObject.tag != "aicar"){
         nLaps += 1;
@@ -69,11 +63,6 @@ public class lapFinish : MonoBehaviour
         qBox2.SetActive(true);
         qBox3.SetActive(true);
     }
-    else {
-        ailaps += 1;
-        if (ailaps > totalLaps){
-            hasAiWon = true;
-        }
-    }
+
    }
 }

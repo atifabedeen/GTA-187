@@ -9,7 +9,7 @@ public class position : MonoBehaviour
     public Text hasWon;
     void Update()
     {
-        if(lapFinish.hasAiWon) {
+        if(lapFinishAi.hasAiWon) {
             hasWon.text = "You finished 2nd! :(";
         }
         else {

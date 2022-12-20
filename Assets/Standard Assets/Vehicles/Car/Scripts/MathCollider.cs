@@ -16,7 +16,6 @@ public class MathCollider : MonoBehaviour
 
     void OnTriggerEnter(Collider coll){
         if (coll.gameObject.tag != "aicar"){
-            Debug.Log("pee");
             box.SetActive(false);
             generateExpression();
             mathQ.text = "What is " + leftNum + " " + op + " " + rightNum + "?"; 

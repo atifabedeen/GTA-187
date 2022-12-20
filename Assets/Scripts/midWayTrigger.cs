@@ -6,8 +6,11 @@ public class midWayTrigger : MonoBehaviour
 {
     public GameObject lapEnd;
     public GameObject halfTrig;
-    public void OnTriggerEnter() {
-        lapEnd.SetActive(true);
-        halfTrig.SetActive(false);
+    public void OnTriggerEnter(Collider coll) {
+         if(coll.gameObject.tag != "aicar"){
+                lapEnd.SetActive(true);
+                halfTrig.SetActive(false);
+         }
+
     }
 }
